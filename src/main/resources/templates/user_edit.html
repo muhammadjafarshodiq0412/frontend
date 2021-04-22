@@ -1,0 +1,20 @@
+<form action="#" th:action="@{/update/{id}(id=${userDto.id}}" th:object="${userDto}" method="post">
+  <div class="modal-header">
+    <h4 class="modal-title">Edit Employee</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label>User</label>
+      <input type="text" name="user" th:field="*{user}" id="user" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <input type="text" name="status" th:field="*{status}" id="status" class="form-control" required>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+    <input type="submit" class="btn btn-info" value="Save">
+  </div>
+</form>

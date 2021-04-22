@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Astra Life</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th> User </th>
+        <th> Created </th>
+        <th> Status </th>
+        <th> Action </th>
+    </tr>
+    </thead>
+    <tbody>
+<!--    <tr th:if="${users.empty}">-->
+<!--        <td colspan="2"> No no Available </td>-->
+<!--    </tr>-->
+    <tr th:each="users : ${users}">
+        <td><span th:text="${users.id}"> ID </span></td>
+        <td><span th:text="${users.user}"> User </span></td>
+        <td><span th:text="${users.created}"> Create </span></td>
+        <td><span th:text="${users.status}"> Status </span></td>
+        <td><button>EDIT</button></td>
+        <td><button>DELETE</button></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
